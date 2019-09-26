@@ -1,0 +1,22 @@
+package ejercicio1;
+
+import java.io.IOException;
+
+public class MainFicheroAleatorio {
+
+	public static void main(String[] args) throws IOException {
+		
+		ManejarFicheroAleatorio alet = new ManejarFicheroAleatorio();
+		
+		alet.cargarFichero();
+		
+		System.out.println(alet.ids);
+		
+		if(alet.comprobarId(2)==true) {
+			System.out.println("está");
+		}
+		
+
+	}
+
+}

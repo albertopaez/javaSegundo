@@ -1,0 +1,21 @@
+package ejercicio1;
+
+import java.io.IOException;
+
+public class MainFicheroAleatorio {
+
+	public static void main(String[] args) throws IOException {
+		
+		ManejarFicheroAleatorio alet = new ManejarFicheroAleatorio();
+		
+		alet.cargarFichero();
+		
+		alet.insertarEmpleado(6, "Probancio", 80, 700.12);
+		
+		alet.consultarEmpleado(6);
+		
+		alet.descargarFichero();
+
+	}
+
+}

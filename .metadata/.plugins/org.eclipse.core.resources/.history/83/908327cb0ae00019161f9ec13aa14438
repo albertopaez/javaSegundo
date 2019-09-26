@@ -1,0 +1,79 @@
+package ejercicio1;
+
+import java.io.*;
+import java.util.*;
+
+public class ManejarFicheroAleatorio {
+	
+	ArrayList<Integer> ids=new ArrayList<Integer>();
+	ArrayList<String> apellidos=new ArrayList<String>();
+	ArrayList<Integer> deps=new ArrayList<Integer>();
+	ArrayList<Double> salarios=new ArrayList<Double>();
+	int id;
+	String apellido;
+	int dep;
+	double salario;
+	int posicion;
+	
+	public ManejarFicheroAleatorio() {
+		
+	}
+	
+	
+	public void cargarFichero() throws IOException {
+		File fichero = new File("Empleados.txt");
+        RandomAccessFile file=new RandomAccessFile (fichero, "r");
+        Double salario;
+        char apellidoC[]=new char[10], aux;
+        for(;;){
+            file.seek(posicion);
+            id=file.readInt();
+            for(int i=0;i<apellidoC.length;i++){
+                aux=file.readChar();
+                apellidoC[i]=aux;
+            }
+            apellido=new String(apellidoC);
+            dep=file.readInt();
+            salario=file.readDouble();
+            ids.add(id);
+            apellidos.add(apellido);
+            deps.add(dep);
+            salarios.add(salario);
+            posicion=posicion+36;
+            if(file.getFilePointer()==file.length()) {
+                break;
+            }
+        }
+        file.close();
+	}
+	
+	public boolean comprobarId(int idComprobar) {
+		if(this.ids.contains(idComprobar)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	
+	public void insertarEmpleado(int idEmpleado, String apellidoEmpleado,
+			int depEmpleado, double salarioEmpleado) {
+		if(this.comprobarId(idEmpleado)) {
+			System.out.println("Este ID ya existe");
+		}else {
+			this.ids.add(idEmpleado);
+            apellidos.add(apellidoEmpleado);
+            deps.add(depEmpleado);
+            salarios.add(salarioEmpleado);
+		}
+	}
+	
+	public void consultarEmpleado(int IdEmpleado) {
+		if(this.comprobarId(IdEmpleado)) {
+			
+		}else {
+			System.out.println("Este empleado no existe");
+		}
+	}
+
+}
