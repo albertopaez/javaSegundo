@@ -3,7 +3,7 @@ package ejercicio1;
 import java.io.*;
 import java.util.*;
 
-public class ManejarFicheroAleatorio {
+public class Empleado {
 	
 	ArrayList<Integer> ids=new ArrayList<Integer>();
 	ArrayList<String> apellidos=new ArrayList<String>();
@@ -15,7 +15,7 @@ public class ManejarFicheroAleatorio {
 	double salario;
 	int posicion;
 	
-	public ManejarFicheroAleatorio() {
+	public Empleado() {
 		
 	}
 	

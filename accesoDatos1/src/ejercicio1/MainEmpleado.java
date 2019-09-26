@@ -2,17 +2,15 @@ package ejercicio1;
 
 import java.io.IOException;
 
-public class MainFicheroAleatorio {
+public class MainEmpleado {
 
 	public static void main(String[] args) throws IOException {
 		
-		ManejarFicheroAleatorio alet = new ManejarFicheroAleatorio();
+		Empleado alet = new Empleado();
 		
 		alet.cargarFichero();
 		
 		alet.consultarEmpleado(2);
-		
-		System.out.println(alet.apellidos.get(1));
 
 	}
 
