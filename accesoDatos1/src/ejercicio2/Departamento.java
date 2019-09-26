@@ -9,32 +9,17 @@ public class Departamento implements Serializable {
 	
 	
 	
-	public void introducirDepartamento(int numeroD, String nombreD, String localidadD) {
-		
+	public Departamento(int numeroDepartamento, String nombre, String localidad) {
+		super();
+		this.numeroDepartamento = numeroDepartamento;
+		this.nombre = nombre;
+		this.localidad = localidad;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public Departamento() {
+	}
+
+	public void introducirDepartamento(int numeroD, String nombreD, String localidadD) {
+	}
 	
 	public int getNumeroDepartamento() {
 		return numeroDepartamento;

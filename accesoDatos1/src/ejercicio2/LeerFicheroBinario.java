@@ -1,17 +1,19 @@
 package ejercicio2;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class LeerFicheroBinario {
 
 	public static void main(String[] args) {
 		
-		Departamento d = null;
+		Departamento dep = new Departamento();
+		ArrayList<Departamento> deps = new ArrayList<Departamento>();
 		
 	      try {
 	         FileInputStream fileIn = new FileInputStream("Departamentos.dat");
 	         ObjectInputStream in = new ObjectInputStream(fileIn);
-	         d = (Departamento) in.readObject();
+	         deps = (ArrayList<Departamento>) in.readObject();
 	         in.close();
 	         fileIn.close();
 	      } catch (IOException i) {
@@ -23,10 +25,8 @@ public class LeerFicheroBinario {
 	         return;
 	      }
 	      
-	      System.out.println("Deserialized Employee...");
-	      System.out.println("Numero: "+d.getNumeroDepartamento());
-	      System.out.println("Nombre: "+d.getNombre());
-	      System.out.println("Localidad: "+d.getLocalidad());
+	      System.out.println(deps.size());
+	      
 	   }
 	}
 
