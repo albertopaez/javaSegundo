@@ -9,7 +9,9 @@ public class Departamento implements Serializable {
 	
 	
 	
-	
+	public void introducirDepartamento(int numeroD, String nombreD, String localidadD) {
+		
+	}
 	
 	
 	
