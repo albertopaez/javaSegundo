@@ -5,8 +5,9 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class Main {
-	
+
 	public static void main(String[] args) throws IOException {
+
 		File directorio = new File(".//bin");
 		ProcessBuilder pb = new ProcessBuilder("java", "ejercicio1.LeerNombre", "Alberto");
 		pb.directory(directorio);
