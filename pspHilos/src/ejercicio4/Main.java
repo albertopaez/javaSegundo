@@ -14,6 +14,8 @@ public class Main {
 		
 		MyHilo h = new MyHilo();
 		
+		h.start();
+		
 		while (input.equals("*") == false) {
 			
 			System.out.println("Introduzca comando");
@@ -33,6 +35,8 @@ public class Main {
 			
 			
 		}
+		
+		
 		
 		
 		
